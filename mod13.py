@@ -1,7 +1,6 @@
 tickets = int(input("Введите количество необходимых билетов: "))
 person = 1
 cash = 0
-
 while person != tickets + 1:
     age_for_ticket = int(input(f'Укажите для какого возраста приобретается билет № {person} ? '))
     if age_for_ticket < 18:
