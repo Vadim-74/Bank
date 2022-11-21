@@ -23,8 +23,8 @@ def values(message: telebot.types.Message):
 
 @bot.message_handler(content_types=['text', ])
 def convert(message: telebot.types.Message):
+    message.text.lower()  # Почему не работает?
     try:
-
         values = message.text.split(' ')
 
         if len(values) != 3:
