@@ -20,12 +20,10 @@ def values(message: telebot.types.Message):
         text = '\n'.join((text, key,))
     bot.reply_to(message, text)
 
-
 @bot.message_handler(content_types=['text', ])
 def convert(message: telebot.types.Message):
-    message.text.lower()  # Почему не работает?
     try:
-        values = message.text.split(' ')
+        values = message.text.lower().split(' ')
 
         if len(values) != 3:
             raise ConvertionException('Введите три параметра.')
